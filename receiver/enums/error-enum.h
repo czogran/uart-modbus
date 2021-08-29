@@ -1,0 +1,61 @@
+#pragma once
+
+#include <map>
+#include "string"
+#include <vector>
+
+using std::map;
+using namespace std;
+
+enum Error {
+    NO_ERROR = 1,
+    BOARD_UNCOMPLETED = 2,
+    USB_POWER_SUPPLY = 3,
+    BATTERY_DISCHARGED = 4,
+    FAN_ERROR = 5,
+    POWER_LINE_5V_ERROR = 6,
+    POWER_LINE_12V_ERROR = 7,
+    CURRENT_THRESHOLD_EXCEEDING = 8,
+    TOF_SHORT_CIRCUIT = 9,
+    SENSORS_TOF_SHORT_CIRCUIT = 12,
+    LEFT_ENGINE_HIGH_TEMPERATURE = 13,
+    RIGHT_ENGINE_HIGH_TEMPERATURE = 14,
+    LEFT_ENGINE_OVERHEATING = 15,
+    RIGHT_ENGINE_OVERHEATING = 16,
+    STEPPER_MOTORS_CONTROLLERS_HIGH_TEMPERATURE = 17,
+    CONVERTER_HIGH_TEMPERATURE = 18,
+    BOARD_HIGH_TEMPERATURE = 19,
+    BOARD_OVERHEATING = 20,
+    STEPPER_MOTORS_CONTROLLERS_OVERHEATING = 21,
+    CONVERTER_OVERHEATING = 22,
+    BATTERY_LOW_VOLTAGE = 23,
+    BATTERY_CRITICAL_VOLTAGE = 24
+};
+
+
+map <Error, string> errorMap{
+        {NO_ERROR,                                    "NO_ERROR"},
+        {BOARD_UNCOMPLETED,                           "BOARD_UNCOMPLETED"},
+        {USB_POWER_SUPPLY,                            "USB_POWER_SUPPLY"},
+        {BATTERY_DISCHARGED,                          "BATTERY_DISCHARGED"},
+        {FAN_ERROR,                                   "FAN_ERROR"},
+        {POWER_LINE_5V_ERROR,                         "POWER_LINE_5V_ERROR"},
+        {POWER_LINE_12V_ERROR,                        "POWER_LINE_12V_ERROR"},
+        {CURRENT_THRESHOLD_EXCEEDING,                 "CURRENT_THRESHOLD_EXCEEDING"},
+        {TOF_SHORT_CIRCUIT,                           "TOF_SHORT_CIRCUIT"},
+        {SENSORS_TOF_SHORT_CIRCUIT,                   "SENSORS_TOF_SHORT_CIRCUIT"},
+        {LEFT_ENGINE_HIGH_TEMPERATURE,                "LEFT_ENGINE_HIGH_TEMPERATURE"},
+        {RIGHT_ENGINE_HIGH_TEMPERATURE,               "RIGHT_ENGINE_HIGH_TEMPERATURE"},
+        {LEFT_ENGINE_OVERHEATING,                     "LEFT_ENGINE_OVERHEATING"},
+        {RIGHT_ENGINE_OVERHEATING,                    "RIGHT_ENGINE_OVERHEATING"},
+        {STEPPER_MOTORS_CONTROLLERS_HIGH_TEMPERATURE, "STEPPER_MOTORS_CONTROLLERS_HIGH_TEMPERATURE"},
+        {CONVERTER_HIGH_TEMPERATURE,                  "CONVERTER_HIGH_TEMPERATURE"},
+        {BOARD_HIGH_TEMPERATURE,                      "BOARD_HIGH_TEMPERATURE"},
+        {BOARD_OVERHEATING,                           "BOARD_OVERHEATING"},
+        {STEPPER_MOTORS_CONTROLLERS_OVERHEATING,      "STEPPER_MOTORS_CONTROLLERS_OVERHEATING"},
+        {CONVERTER_OVERHEATING,                       "CONVERTER_OVERHEATING"},
+        {BATTERY_LOW_VOLTAGE,                         "BATTERY_LOW_VOLTAGE"},
+        {BATTERY_CRITICAL_VOLTAGE,                    "BATTERY_CRITICAL_VOLTAGE"},
+};
+
+vector <Error> errorVector;
